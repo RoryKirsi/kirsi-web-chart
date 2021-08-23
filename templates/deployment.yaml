@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "webchart.fullname" . }}
+  name: {{ .Chart.Name }}
   labels:
     {{- include "webchart.labels" . | nindent 4 }}
 spec:

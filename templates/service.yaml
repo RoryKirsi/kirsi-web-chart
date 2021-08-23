@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "webchart.fullname" . }}
+  name: {{ .Chart.Name }}
   labels:
     {{- include "webchart.labels" . | nindent 4 }}
 spec:
